@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Israel Odeajo | AI Engineer · ML Researcher · Speaker</title>
+  <meta name="description" content="Israel Olanrewaju Odeajo: AI Engineer and ML researcher. NeurIPS 2026 author, Deep Learning Indaba Best Paper winner, speaker and mentor. Open to PhD positions and AI Engineer roles." />
+  <meta property="og:title" content="Israel Odeajo | AI Engineer · ML Researcher" />
+  <meta property="og:description" content="Safe LLM agents, multi-agent RAG and African-language NLP. 2× NeurIPS 2026 workshop papers." />
+  <meta property="og:image" content="assets/portrait.jpg" />
+  <link rel="icon" href="assets/portrait.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", saved || "dark");
+    })();
+  </script>
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" id="logo"></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#wins">News</a>
+        <a href="#projects">Projects</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#blog">Writing</a>
+        <a href="#journey">Journey</a>
+        <a href="#mentoring">Mentoring</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <span class="open-pill"><span class="dot"></span><span id="hero-open"></span></span>
+          <h1><span class="hello">Hi, I'm</span> <span class="gradient-text" id="hero-name"></span></h1>
+          <h2 class="typed-line"><span id="typed"></span><span class="caret">|</span></h2>
+          <p class="lead" id="hero-tagline"></p>
+          <div class="hero-cta">
+            <a href="#research" class="btn btn-primary">View my research</a>
+            <a href="#speaking-form" class="btn btn-glass">Invite me to speak</a>
+            <a href="#mentoring" class="btn btn-ghost">Book mentoring →</a>
+          </div>
+          <div class="socials" id="hero-socials"></div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="portrait-frame">
+            <div class="portrait-ring"></div>
+            <img id="hero-avatar" alt="Portrait of Israel Odeajo" />
+          </div>
+          <div class="floating-badges" id="hero-badges"></div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <div class="marquee" aria-label="Venues">
+      <div class="marquee-label">Presented &amp; published at</div>
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+
+    <section id="about" class="section">
+      <div class="container">
+        <p class="kicker reveal">About</p>
+        <h2 class="section-title reveal">Building AI that is <span class="gradient-text">trustworthy</span> and <span class="gradient-text">inclusive</span></h2>
+        <div class="about-grid">
+          <div class="about-text reveal" id="about-text"></div>
+          <div class="stats reveal" id="stats"></div>
+        </div>
+        <div class="skills reveal" id="skills"></div>
+      </div>
+    </section>
+
+    <section id="research" class="section alt">
+      <div class="container">
+        <p class="kicker reveal">Research</p>
+        <h2 class="section-title reveal">Research agenda &amp; publications</h2>
+        <p class="statement reveal" id="research-statement"></p>
+        <div class="interests" id="interests"></div>
+        <h3 class="sub-title reveal">Publications</h3>
+        <div class="pubs" id="pubs-list"></div>
+      </div>
+    </section>
+
+    <section id="wins" class="section">
+      <div class="container">
+        <p class="kicker reveal">News</p>
+        <h2 class="section-title reveal">Wins &amp; milestones</h2>
+        <p class="section-sub reveal">Awards, acceptances, features and recognition.</p>
+        <div class="timeline" id="wins-list"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="container">
+        <p class="kicker reveal">Projects</p>
+        <h2 class="section-title reveal">Things I've built</h2>
+        <p class="section-sub reveal">Research systems and AI products, most of them open source.</p>
+        <div class="filters reveal" id="project-filters"></div>
+        <div class="card-grid" id="projects-list"></div>
+      </div>
+    </section>
+
+    <section id="speaking" class="section">
+      <div class="container">
+        <p class="kicker reveal">Speaking</p>
+        <h2 class="section-title reveal">On stage</h2>
+        <p class="section-sub reveal">Keynotes, talks, posters and workshops.</p>
+        <div class="talks" id="talks-list"></div>
+        <p class="talks-note reveal" id="talks-note"></p>
+
+        <div class="form-card glow reveal" id="speaking-form">
+          <div class="form-head">
+            <h3>Invite me to speak</h3>
+            <p>Conferences, meetups, university events, podcasts and corporate trainings. Tell me about your event.</p>
+          </div>
+          <form class="form" data-subject="Speaking invitation">
+            <div class="form-row">
+              <label>Your name<input name="name" required /></label>
+              <label>Email<input type="email" name="email" required /></label>
+            </div>
+            <div class="form-row">
+              <label>Organisation / event<input name="event" required /></label>
+              <label>Date<input type="date" name="date" /></label>
+            </div>
+            <div class="form-row">
+              <label>Format
+                <select name="format">
+                  <option>Keynote</option>
+                  <option>Talk</option>
+                  <option>Panel</option>
+                  <option>Workshop</option>
+                  <option>Podcast / Interview</option>
+                  <option>Corporate training</option>
+                </select>
+              </label>
+              <label>Location<input name="location" placeholder="City or Virtual" /></label>
+            </div>
+            <label>Details<textarea name="message" rows="4" placeholder="Audience, topic, duration, budget / travel support..."></textarea></label>
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" />
+            <button class="btn btn-primary" type="submit">Send invitation</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="press" class="section alt slim">
+      <div class="container">
+        <p class="kicker reveal">Featured</p>
+        <h2 class="section-title reveal">In the press</h2>
+        <div class="press-grid" id="press-list"></div>
+        <div class="testimonials" id="testimonials"></div>
+      </div>
+    </section>
+
+    <section id="blog" class="section">
+      <div class="container">
+        <p class="kicker reveal">Writing</p>
+        <h2 class="section-title reveal">Blog</h2>
+        <p class="section-sub reveal">Articles on data engineering, ML deployment and growing a tech career.</p>
+        <div class="card-grid" id="blog-list"></div>
+      </div>
+    </section>
+
+    <section id="journey" class="section alt">
+      <div class="container">
+        <p class="kicker reveal">Journey</p>
+        <h2 class="section-title reveal">Academic &amp; career path</h2>
+        <div class="journey-grid">
+          <div>
+            <h3 class="col-title reveal">Education</h3>
+            <div class="timeline" id="education-list"></div>
+            <h3 class="col-title reveal">Certifications</h3>
+            <ul class="check-list compact reveal" id="cert-list"></ul>
+            <h3 class="col-title reveal">Community &amp; leadership</h3>
+            <ul class="check-list compact reveal" id="community-list"></ul>
+          </div>
+          <div>
+            <h3 class="col-title reveal">Experience</h3>
+            <div class="timeline" id="experience-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentoring" class="section">
+      <div class="container">
+        <p class="kicker reveal">Mentoring</p>
+        <h2 class="section-title reveal">One-on-one mentoring</h2>
+        <div class="mentoring-grid">
+          <div class="reveal">
+            <p class="lead" id="mentoring-intro"></p>
+            <ul class="check-list" id="mentoring-topics"></ul>
+            <a class="btn btn-primary" id="booking-btn" target="_blank" rel="noopener" hidden>Book a session</a>
+          </div>
+          <div class="form-card glow reveal">
+            <div class="form-head">
+              <h3>Request a session</h3>
+              <p>Tell me where you are and where you want to go.</p>
+            </div>
+            <form class="form" data-subject="Mentoring request">
+              <div class="form-row">
+                <label>Your name<input name="name" required /></label>
+                <label>Email<input type="email" name="email" required /></label>
+              </div>
+              <label>I am a...
+                <select name="stage">
+                  <option>Student</option>
+                  <option>Early-career professional</option>
+                  <option>Career switcher</option>
+                  <option>Aspiring researcher / PhD applicant</option>
+                </select>
+              </label>
+              <label>What would you like help with?<textarea name="message" rows="4" required></textarea></label>
+              <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" />
+              <button class="btn btn-primary" type="submit">Send request</button>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="kicker">Contact</p>
+          <h2 class="section-title">Let's build something <span class="gradient-text">remarkable</span></h2>
+          <p class="lead">PhD supervisors, recruiters, collaborators and event organisers: I'd love to hear from you.</p>
+          <a class="contact-email" id="contact-email"></a>
+          <div class="socials" id="contact-socials"></div>
+        </div>
+        <div class="form-card glow reveal">
+          <form class="form" data-subject="New message from your website">
+            <div class="form-row">
+              <label>Your name<input name="name" required /></label>
+              <label>Email<input type="email" name="email" required /></label>
+            </div>
+            <label>Reason
+              <select name="reason">
+                <option>PhD / research opportunity</option>
+                <option>AI Engineer role</option>
+                <option>Collaboration</option>
+                <option>Consulting</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Message<textarea name="message" rows="5" required></textarea></label>
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" />
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> <span id="footer-name"></span></p>
+      <a href="#home" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
